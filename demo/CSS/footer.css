@@ -1,0 +1,16 @@
+#nFooter 
+{
+	
+background: #000;
+color: #fff;
+padding: 0 1px;
+
+
+}
+.nContainer {
+border-left: 1px solid #333;
+border-right: 1px solid #333;
+border-bottom: 1px solid #090909;
+background: #252525;
+padding: 35px 28px 35px 28px;
+}

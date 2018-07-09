@@ -1,0 +1,957 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	<meta content="images/google_favicon_128.png" itemprop="image">
+		<title>HEDWIG HTML5</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="Keywords" content="Oscar Herrera,tutorial,html,canvas,polymer,oscar,herrera,node,nodejs.javascript,java,google,googledevelopers"/>
+<meta name="Description" content="Oscar Herrera. Temas Google Developers"/>
+<meta name="Distribution" content="global"/>
+<meta name="Robots" content="all"/>
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body id="top" oncontextmenu='return false' onkeydown='return false'>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="#" class="image avatar"><img src="images/oscar.jpeg" alt="" /></a>
+				<h1><strong>Oscar Herrera</strong>, un developer <br />
+				en plataformas como HTML 5, Canvas , NODE.JS, CSS3 y JS,<br />
+				este sitio a nacido para aportar en el desarrollo de la <br/> 
+				Web.</a>.</h1>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+
+	</header>
+<div id="Layer1" >
+
+
+<h2>Lo que es React y ¿por qué debería utilizarlo?</h2>
+<p>
+<p>
+React como página de inicio contesta el "qué" bastante bien. Si me preguntan, defino React como un "motor de renderizado de la interfaz de usuario basada en JavaScript." Noten que me fui a "HTML" fuera de esa definición. Esto se debe a HTML es sólo uno de muchos posibles objetivos. También me dejó salir "navegador" porque se puede utilizar React en el servidor también. (Y espero que las aplicaciones nativas pronto.) La parte "motor" de mi definición me recuerda a la similitud con los motores de juego. Con React, al igual que con un motor de juego, sólo tiene que especificar cómo un estado de la aplicación dada se traduce a una vista determinada. Si algo cambia, no se cambia la vista. En su lugar, sólo se renderiza nuevamente y obtienes una nueva vista.
+<p>
+Este enfoque simple hace que todo un conjunto de problemas se aparten. Estamos ante una transición de vistas Backbone para React en puntos de vista, y no hay vuelta atrás en este punto. Con React, no hay complejidad extra de mantener su estado de la aplicación y la vista en sincronía. Sólo render, aclara, repite. Pueden construir fácilmente los componentes de interfaz de usuario completamente aislados, reutilizables, y componibles. vistas anidadas simplemente se convierten en una extensión natural de la manera React con sus propias obras. Si cambian las cosas, vistas refactorización es casi divertido!
+<p>
+
+Un pequeño ejercicio
+
+en estos ejemplos utilice jsFiddle , para que puedan verlos correr aquí en este post. Basta con hacer clic en la liga "Resultados" para ver el ejemplo tal y como aparecería en un navegador. Sigue el enlace "Editar en jsFiddle" si quieres crear en un ejemplo particular.
+<p>
+
+<ul class="actions">
+							<li><a href="https://jsfiddle.net/oscar_herrerac/ab6grgee/3/" class="button">Ver Ejemplo 1</a></li>
+						</ul>
+
+
+<p>
+<p>
+
+JSX no es un lenguaje de plantillas
+<p>
+Lo primero es darse cuenta de que JSX no es un lenguaje de plantillas. Si usted confunde con algo como manillares, que van a terminar pensando que es mucho ruido y pocas nueces. Lo que es peor, se romperá de manera misteriosa. JSX es simplemente una sintaxis JavaScript alternativo, aunque uno que es (al menos en la actualidad) específica para React. 
+<p>
+El ejemplo anterior es identico a:
+<p>
+
+
+<ul class="actions">
+							<li><a href="https://jsfiddle.net/oscar_herrerac/ks1yabua/2/" class="button">Ver Ejemplo 2</a></li>
+						</ul>
+
+<p>
+Espero sea de ayuda para conocer un poco de React JS
+<p>
+<p>
+<p>
+<p>
+<h2>Polymer 1.0 Crear plantilla y elemento reutilizable</h>
+<p>
+<p>
+Polymer es una librería muy completa que nos ayuda a la creación de Web Components de una manera mas fácil y pensando siempre en crear en un ecosistema de componentes.
+<p>
+Para crear un Web Component (también conocido como elemento) con Polymer primero tienes que saber manejar un poco de bower ya que así será más fácil manejar las dependencias.
+<p>
+Partiendo de las explicaciones anteriores la instalacion de polymer utilizando bower y estableciendo el proyecto inicial.
+<p>
+Con lo que hemos descargado podemos generar nuestros propios elementos, pero Polymer ya tiene una buena cantidad de elementos propios de su core y ademas tiene elementos trabajados en base al estilo de ‘Material Design’ el nuevo paradigma de diseño que propuso google en su evento de desarrollo hace poco.
+Si queremos obtener los mismo tenemos que hacer lo siguiente:
+<p>
+<textarea name="" style="background-color: #2b303b; color:white;" >
+//este comando es para obtener los elementos como por ejemplo para hacer peticiones ajax
+bower install --save Polymer/core-elements
+ <p>
+// este es para obtener los elementos de material design
+bower install --save Polymer/paper-elements
+Para usar polymer se tiene que hacer dos cosas:
+1. Importar el core de polymer que es el archivo polymer.html
+2. Para declarar el elemento se usa la etiqueta</textarea>
+<p>
+Para usar polymer se tiene que hacer dos cosas:
+1. Importar el core de polymer que es el archivo polymer.html
+2. Para declarar el elemento se usa la etiqueta
+
+<p>
+<textarea name="" style="background-color: #2b303b; color:white;">
+	
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- El atributo name es donde se colocara el nombre del elemento, que este caso se llamaría "nuevo-elemento" -->
+<!-- y se utilizaría usando el tag <nuevo-elemento> -->
+<polymer-element name="nuevo-elemento" noscript>
+ <template>
+  <span>Esto es <b>nuevo elemento</b>. Esto es un Shadow DOM.</span>
+ </template>
+</polymer-element>
+
+</textarea>
+<p>
+Con esto ya tendríamos la plantilla básica para crear un elemento personalizado.
+<p>
+Pero una de las cosas buenas de polymer es la reutilización, por ejemplo podemos usar un elemento ya creado, para la creación de otro
+<p>
+<textarea name="" style="background-color: #2b303b; color:white;">
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+ <p>
+<polymer-element name="my-element" noscript>
+  <template>
+    <span>I'm <b>my-element</b>. This is my Shadow DOM.</span>
+    <core-ajax url="http://example.com/json" auto response="{{resp}}"></core-ajax>
+    <textarea value="{{resp}}"></textarea>
+  </template>
+</polymer-element>
+<p>
+</textarea>
+<p>
+
+Para este caso vemos que se usa el elemento para la obtención de datos que se usa al momento de crear el elemento
+<p>
+Ahora, crearemos un elemento para la creación de una tarjeta la cuál llamaremos card-person.html, para ver como se le agregan atributos a un elemento nuevo:
+<p>
+<textarea name=""  style="background-color: #2b303b; color:white;">
+<p>
+<!- card-person.html -->
+<link rel="import" href="/components/polymer/polymer.html">
+<polymer-element name="card-person">
+ <template>
+  <div class="itemCard" style="background:{{color}}">
+   <h1>{{name}}</h1>
+  </div>
+ </template>
+ <script>
+   Polymer('card-person', {
+     name: "Erik",
+     color: "#ccc"
+   });
+ </script>
+</polymer-element>
+<p>
+<!-- Implementación -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="webcomponents.js"></script> <!-- esto desde la versión 0.5.1 -->
+    <link rel="import" href="card-person.html">
+  </head>
+  <body>
+    <card-person></card-person>
+  </body>
+</html>
+</textarea>
+<p>
+
+
+
+
+<h2>El uso de Polymer 1.0 en un WebView</h2>
+<p>
+Estructura de aplicación recomendada
+<p>
+Los archivos que activarán el WebView deben estar dentro del proyecto src / main / activos de carpeta.
+<p> 
+Perfecto para archivos web estáticas!
+<p>
+Dentro de la carpeta raiz, se recomienda crear una carpeta wwww para guardar su aplicación web. Esta carpeta es también donde las dependencias de elementos adecuados (p.ej. bower_components ) pueden ir.
+<p>
+El uso de Bower para instalar elementos
+<p>
+si no está familiarizado con Bower, ver la instalacion en el los primeros articulos .
+<p>
+Crear un bower.json archivo en src / / activos / www principal que indique sus dependencias elemento. A modo de ejemplo, vamos a tirar en todos los elementos de papel y del núcleo:
+<p>
+En src / / activos / www principal , crear bower.json :
+<p>
+{ 
+  "name" :  "PolymerWebView" , 
+  ... 
+  "dependencies" :  { 
+    "core-elements" :  "Polymer/core-elements#^0.5.6" , 
+    "paper-elements" :  "Polymer/paper-elements#^0.5.6" 
+  } 
+}
+<p>
+En la www , ejecute para instalar y rellenar el bower_components carpeta.
+<p>
+Usando Las importaciones HTML
+Crear src / main / activos / www / elements.html , una importación de HTML que incluye todos los elementos de las importaciones va a utilizar su aplicación:
+<p>
+<textarea name=""><link  rel = "import"  href = "bower_components/core-drawer-panel/core-drawer-panel.html" > </textarea>
+<p>
+<textarea name=""><link  rel = "import"  href = "bower_components/core-toolbar/core-toolbar.html" > </textarea>
+<p>
+<textarea name=""><link  rel = "import"  href = "bower_components/core-icons/core-icons.html" > </textarea>
+
+<p>
+<h2>Crear elemento reutilizable en Polymer 1.0</h2>
+
+<p>
+Introducción
+Así pues, usted desea publicar su primer elemento de polímero reutilizable? ¡Fantástico! Esta guía le guiará por el proceso.
+<p>
+Cuando haya terminado, tendrá que:
+<p>
+Un repositorio git local para su elemento, basado en el texto modelo oficial.
+Un publicada, versión Glorieta-instalable de su elemento en GitHub.
+Documentación y una demostración de funcionamiento de su elemento alojado en GitHub páginas.
+Esta guía asume que tiene git , Nodo y Bower instalados en el sistema, y que tiene una cuenta de GitHub puede utilizar para publicar sus elementos.
+<p>
+instalar PolyServe
+Debido a la forma HTML importa trabajos, se necesita un servidor web local para poner a prueba sus elementos.
+<p>
+PolyServe es un simple servidor web que le permite utilizar componentes locales Bower. Es muy bueno para probar los elementos durante el desarrollo. Instalarlo mediante MNP :
+<p>
+NPM instalar - g PolyServe
+<p>
+<h2>Crear</h2>
+Crear un nuevo directorio en su sistema para trabajar en los elementos de polímero (por ejemplo, "desarrollo" ).
+<p>
+Descargar la semilla elemento repetitivo y descomprimirlo en su directorio de trabajo.
+<p>
+Cambiar el nombre del elemento y sus archivos en consecuencia. Por ejemplo, si el elemento se llama <test-elemento> y ha renombrado la semilla elemento de directorio para la prueba de elementos , la lista de archivo debería ser un poco como esto:
+<p>
+<p><img src="images/initial-folder-structure.png" alt="" width="181" height="169" id="irc_mi"></p>
+A continuación, ejecute para instalar dentro de su directorio elemento para instalar dependencias. Las dependencias se instalan en el bower_components directorio. Ahora puede desarrollar a nivel local y servir a su elemento para propósitos de prueba.
+<p>
+<h2>Desarrollar y probar</h2>
+Añadir la lógica específica de su nuevo elemento y verificar su funcionalidad.
+<p>
+Cuando la importación de otros componentes, siga los ejemplos de <semilla-elemento> y escribir los caminos como si las carpetas de componentes eran hermanos a su prueba de elemento de carpeta.
+<p>
+<textarea name=""><link  rel = "importación"  href = "../paper-button/paper-button.html" ></textarea>
+Una buena manera de probar rápidamente la cordura es su componente para acceder a su archivo de demostración utilizando PolyServe:
+<p>
+$ PolyServe
+ A partir  PolyServe en el puerto 8080 
+de la porción componentes de bower_components
+ Archivos  en  este directorio están disponibles en localhost : 8080 / componentes / 
+
+<p>
+
+<p>
+
+<p>
+
+<h2>¿Cómo instalo docker?</h2>
+
+<p>
+El procedimiento de instalación por excelencia es bajo ambientes Ubuntu, por lo tanto será el que explicaremos aquí. En este caso particular ya que no poseo un computador con Linux, usaremos una instancia Ubuntu Precise 64bit de Vagrant, sin embargo no seguiremos las instrucciones proporcionadas por la página de Docker para la instalación especifica por Vagrant para hacer el procedimiento lo más parecido a lo nativo en un ambiente Ubuntu.
+<p>
+Al momento de este escrito, Docker no soporta sistemas x86.
+Debido a que Docker funciona mejor con el kernel 3.8 veamos si nuestra instancia aplica para este propósito
+
+$ uname -a
+Linux precise64 3.2.0-23-generic...
+<p>
+Ya que esta versión de Ubuntu viene con la 3.2 debemos actualizarlo, así que inicialmente haremos:
+<p>
+$ sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring
+<p>
+Luego procedemos a reiniciar el sistema
+<p>
+$ sudo reboot
+<p>
+Probemos que en efecto el kernel fue actualizado:
+<p>
+$ uname -a
+Linux precise64 3.8.0-30-generic
+
+<p>
+Bien, ahora agreguemos el repositorio de Docker y sus llaves lista local de fuentes y llavero local:
+<p>
+$ sudo sh -c "curl https://get.docker.io/gpg | apt-key add -"
+$ sudo sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"...
+<p>
+Volvemos a refrescar la lista de fuentes e instalamos el paquete de Docker:
+<p>
+$ sudo apt-get update
+$ sudo apt-get install lxc-docker
+<p>
+Verifiquemos que fue instalado:
+<p>
+$ docker -v
+Docker version 0.6.1, build 5105263
+
+
+
+ <ul class="actions">
+							<li><a href="https://www.youtube.com/embed/pGYAg7TMmp0" class="button">Mas Acerca</a></li>
+						</ul>
+
+</p>
+
+<h2>¿Cómo empezar con Docker?</h2>
+<p>Docker es un marco de código abierto que proporciona un tipo más ligero de la virtualización, el uso de contenedores de Linux en lugar de las máquinas virtuales.Construido sobre las distribuciones de Linux tradicionales tales como Red Hat Enterprise Linux y Ubuntu, Docker permite empaquetar aplicaciones y servicios como imágenes que se ejecutan en sus propios recipientes portátiles y pueden moverse entre físicos, virtuales y de nube fundaciones sin necesidad de ninguna modificación.Si se construye una imagen Docker en un ordenador portátil Ubuntu o servidor físico, puede ejecutarlo en cualquier Linux compatible, en cualquier lugar.</p>
+<p><img src="images/docker.jpg" alt="" width="373" height="368" id="irc_mi"></p>
+<p>De esta manera, Docker permite un alto grado de portabilidad de aplicaciones y agilidad, y se presta a aplicaciones altamente escalables.Sin embargo, la naturaleza de acoplable también se inclina hacia ejecutando un solo servicio o aplicación por contenedor, en lugar de una colección de procesos, tales como una pila LAMP.Eso es posible, pero vamos a detallar aquí el uso más común, que es para un solo proceso o servicio.</p>
+<p>Por lo tanto, en esta guía, vamos a instalar el servidor Web Apache en un recipiente Docker e investigamos cómo Docker opera a lo largo del camino.</p>
+
+                        <ul class="actions">
+							<li><a href="https://www.youtube.com/watch?v=-fMbyy70NFc" class="button">Ver introduccion</a></li>
+						</ul>
+
+
+
+ <h2>End to End with Polymer (The Polymer Summit 2015).</h2>
+						
+						<p>Conferencia por Rob Dodson Polymer + Firebase 🔥Check mi charla de #PolymerSummit para aprender cómo construir en tiempo real, aplicaciones de usuario autenticado 🚀 </p>
+
+                      
+						<ul class="actions">
+							<li><a href="https://youtu.be/1f_Tj_JnStA?list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J" class="button">Ver Presentacion</a></li>
+						</ul>
+
+ <h2>Mobile Apps y sus Desafíos.</h2>
+						
+						<p>¡No te pierdas el video de +Seba Rodriguez en donde comparte la presentación Mobile 
+						    Apps y sus desafíos! #GDSSantiago</p>
+
+                      
+						<ul class="actions">
+							<li><a href="https://youtu.be/nKlNA32tuWI" class="button">Ver Presentacion</a></li>
+						</ul>
+
+<h2>Instalar Node.js en Windows</h2>
+
+<p>Ingresamos a nodejs.org, damos al botón “Install” e instalamos el archivo descargado (el típico siguiente, siguiente, finish).<p>
+
+<h2>Instalar Stylus en Windows</h2>
+
+<p>Ahora sigue instalar stylus, abrimos la terminal de windows (cmd) y escribimos:<p>
+
+<p>Código :<p>
+<p>npm –g install stylus<p>
+
+<p>npm: llamamos a la paquetería de node.js
+-g: decimos que lo instalaremos en global para todo el pc
+Install: instalar
+Stylus: paqueteria?<p>
+
+<h2>Heredando de elementos HTML nativos con componentes Web.</h2>
+						
+						<p>Herencia en HTML ? con Polymer no sólo es posible con componentes Web , es super útil para trabajar con formas y accesibilidad .</p>
+
+<p>Polymer 0.8 documentation
+(<a href="https://www.polymer-project.org/0.8/">https://www.polymer-project.org/0.8/</a>)
+<p>
+
+<p>Polyserve
+(<a href="https://github.com/polymerlabs/polyserve">https://github.com/polymerlabs/polyserve</a>)
+<p>
+
+                    
+						<ul class="actions">
+							<li><a href="https://youtu.be/OV8BvxpNQOs?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN" class="button">Ver Herencia Con Polymer</a></li>
+						</ul>
+
+  <h2>Aprender a programar en python.</h2>
+						
+						<p>En esta ocasión tratara para los que desean aprender a programar en Python.</p>
+                        <p>Ya que en <a href="https://hedwigquiron.github.io/HEDWIG/">https://hedwigquiron.github.io/HEDWIG/</a> apoyamos todos los recursos gratuitos para los desarrolladores, lo consideramos muy interesante para que todos los principiantes alcancen su nivel básico y se inicien en el mundo de la programación en un lenguaje muy potente en el mercado laboral.</p>
+
+                        <p>Lo primero es una guía para principiantes que pueden encontrar en el siguiente enlace:(<a href="http://learnpythonthehardway.org/book">http://learnpythonthehardway.org/book</a>), ahí tienen todo bien estructurado con muchos ejemplos que son pieza fundamental cuando se programa.</p>
+
+                        <p>Luego tenemos otro recurso creado en Udemy y que podrás visitar desde el siguiente enlace: (<a href="https://blog.udemy.com/python-tutorial">https://blog.udemy.com/python-tutorial</a>). Ahí tenemos una buena cantidad de información desde estructuras simples hasta las más complejas de repetición.</p>
+
+                      <p>Para aprender mas les dejamos un excelente tutorial elaborado por Arturo Jamaica</p>
+						<ul class="actions">
+							<li><a href="https://www.youtube.com/watch?v=DjeRilk8hPI" class="button">Ver ¿Que es Python? y Tipos de Datos Básicos</a></li>
+						</ul>
+
+						   <h2>Reusing Bitmaps.</h2>
+						
+						<p>Cambiar el tamaño de los mapas de bits es una técnica fundamental para Desarrolladores de Android que se preocupan por el rendimiento y la presión de memoria. Y como tal, Android ofrece un conjunto de APIs para que sea mucho más fácil .... pero es demasiado confuso cómo funcionan. </p>
+
+						<p>+ Colt McAnlis da un resumen de las opciones, para que puedas encontrar el API adecuado para sus necesidades exactas.</p>
+
+                      
+						<ul class="actions">
+							<li><a href="https://youtu.be/HY9aaXHx8yA?list=PLOU2XLYxmsIJDPXCTt5TLDu67271PruEk" class="button">Ver video</a></li>
+						</ul>
+
+      <h2>Texas Conferencia JavaScript.</h2>
+						
+						<p>TECH: Texas Conferencia JavaScript | TXJS 2015 · Videos de la conferencia de un día · por TXJS #talks.</p>
+
+                      
+						<ul class="actions">
+							<li><a href="https://youtu.be/hXW7kkyhtqo?list=PLMWftTFfsA8Om-GqKm46bw8GVxyKXRz0X" class="button">Ver Conferencia</a></li>
+						</ul>
+
+						   <h2>Reusing Bitmaps.</h2>
+						
+						<p>Cambiar el tamaño de los mapas de bits es una técnica fundamental para Desarrolladores de Android que se preocupan por el rendimiento y la presión de memoria. Y como tal, Android ofrece un conjunto de APIs para que sea mucho más fácil .... pero es demasiado confuso cómo funcionan. </p>
+
+						<p>+ Colt McAnlis da un resumen de las opciones, para que puedas encontrar el API adecuado para sus necesidades exactas.</p>
+
+                      
+						<ul class="actions">
+							<li><a href="https://youtu.be/HY9aaXHx8yA?list=PLOU2XLYxmsIJDPXCTt5TLDu67271PruEk" class="button">Ver video</a></li>
+						</ul>
+							
+						
+						   <h2>Google BigQuery.</h2>
+						
+						<p>Felipe Hoffa, Developer Advocate en Google, nos revela en una entrevista lo que hay que saber sobre Google BigQuery.</p>
+<p>1.	Consultas más rápidas: La bajada de los precios de almacenamiento hace que hoy en día se tenga mucha más información   que antes. Esto significa más datos que analizar. Pero si paso horas o días para hacer una consulta, avanzar es casi imposible. Google BigQuery permite que las consultas que antes tomaban un día ahora demoren 20 segundos, podemos consultar y analizar este tipo de datos para obtener conocimientos de ellos. Una vez que obtengo el conocimiento, el siguiente paso es aplicar esta información a mi proyecto o startup. </p>
+
+<p>2.	Lenguaje SQL: A diferencia de otras herramientas de Big Data que requieren muchos conocimientos, BigQuery es un producto enfocado a desarrolladores y el lenguaje que utiliza es el SQL. Además hay capas de otros productos que se han creado para hacer más fácil su uso. Muchas personas pueden estar ocupando BigQuery sin darse cuenta. </p>
+
+<p>3.	Gestión en la nube: Big Data representa tener un manejo muy grande de datos y una capacidad de cómputo muy grande, difícil de administrar. Para gestionar estos datos es necesario contar con la nube, la de Google por ejemplo, dónde se resuelvan cuáles son los datos y qué consultas se quieren hacer. </p>
+
+<p>4.	Alta velocidad: ¿Quieres calcular cuántas visitas tiene Wikipedia al mes? BigQuery permite calcularlo escribiendo tres líneas de código SQL para sumar 6 mil millones de números en 5 segundos. </p>
+
+<p>5.	Herramienta abierta: Con BigQuery los usuarios pueden analizar hasta 1 TB de información gratis cada mes.  </p>
+
+<p>Y por último, Felipe nos da tres consejos claves para usar BigQuery:
+Antes, el costo de acumular información era muy alto, pero hoy es mucho más valioso guardar datos en vez de eliminarlos. 
+Guárdenlos en un lugar seguro en la nube. </p>
+<p>Sean siempre curiosos, hagan preguntas y analicen sus decisiones en base a los datos. 
+Si se han quedado con ganas de saber más sobre BigQuery, aquí pueden ver paso a paso cómo Felipe Hoffa y Nick Bortolotti analizan Big Data</p>
+
+                      
+						<ul class="actions">
+							<li><a href="https://youtu.be/MiLF9gIVHUg" class="button">Ver mas recursos</a></li>
+						</ul>
+
+	                   <h2>Latencia de audio: tamaños de búfer.</h2>
+						
+						<p>La razón de existencia de la latencia es que nuestro sonido tiene un camino largo que recorrer, y el sistema operativo que utilicemos también juega un papel importante en ese sentido. Por ejemplo, muchos artistas utilizan ordenadores Mac porque su latencia en sonido es muy baja de por sí (aunque la latencia cero sea un mito), lo cual hace su uso ideal para directos y espectáculos en comparación a ordenadores con Windows, aunque tener claro una cosa: siempre vamos a tener latencia, por muy baja que sea, porque estamos metiendo pasos extra al introducir un ordenador en la ecuación. El truco es que nuestro oído está cómodo con latencias que rondan los 10 milisegundos: a partir de los 15 milisegundos empezaremos a notar que la señal tiene algo de retardo.</p>
+
+                      
+						<ul class="actions">
+							<li><a href="https://goo.gl/dxcw0d" class="button">Ver mas recursos</a></li>
+						</ul>
+
+						<h2>Introduccion a Polymer.</h2>
+
+						<p>La biblioteca de Polymer proporciona un conjunto de características para la creación de elementos personalizados. Estas características están diseñadas para hacer más fácil y más rápido para hacer elementos personalizados que funcionan como elementos DOM estándar. Con un elemento DOM estándar, se podría esperar:</p>
+
+                         <p>1.-Puedes crearlo usando un constructor o document.createElement.</p>
+                         <p>2.-Usted puede configurarlo usando atributos o propiedades.</p>
+                         <p>3.-Puede tener algún DOM interna que se crea para cada instancia.</p>
+                         <p>4.-Responde a la propiedad y el atributo de cambios (por ejemplo, rellenar los datos en el DOM,</p><p>o disparar un evento).</p>
+                         <p>5.-Tiene un poco de estilo por defecto y puede ser de estilo desde el exterior.</p>
+                         <p>6.-Puede proporcionar métodos para que pueda manipular su estado interno.</p>
+						<ul class="actions">
+							<li><a href="https://www.polymer-project.org/1.0/" class="button">Leer mas en Google</a></li>
+						</ul>
+
+</div>
+</section>
+				<!-- Two -->
+					<section id="two">
+						<h2>Articulos Recientes</h2>
+						<div class="row">
+							<article class="6u 12u$(xsmall) work-item">							
+						
+								<iframe class="image fit thumb"  src="https://www.youtube.com/embed/-fMbyy70NFc" frameborder="0" allowfullscreen></iframe>
+								<h3>Introduccion Docker</h3>
+								<p>Explicacion Docker</p>
+							</article>
+					
+
+							<article class="6u 12u$(xsmall) work-item">							
+						
+								<iframe class="image fit thumb" src="https://www.youtube.com/embed/BucGrYACJdQ?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN" frameborder="0" allowfullscreen></iframe>
+								<h3>Polymer Google Developers</h3>
+								<p>Explicacion De Google Developers</p>
+							</article>
+					
+							<article class="6u$ 12u$(xsmall) work-item">
+								<iframe class="image fit thumb"  src="https://www.youtube.com/embed/PnDK17zP9BI?list=PLOU2XLYxmsIJDPXCTt5TLDu67271PruEk" frameborder="0" allowfullscreen></iframe>
+
+								<h3>Latencia de audio: tamaños de búfer</h3>
+								<p> ( 100 Días de Google Dev ).</p>
+							</article>
+
+							
+							<article class="6u 12u$(xsmall) work-item">
+								<iframe class="image fit thumb" src="https://www.youtube.com/embed/MiLF9gIVHUg" frameborder="0" allowfullscreen></iframe>
+								<h3>Google BigQuery</h3>
+								<p>Felipe Hoffa, Developer Advocate en Google.</p>
+							</article>
+							
+							<article class="6u$ 12u$(xsmall) work-item">
+								<iframe  class="image fit thumb" src="https://www.youtube.com/embed/HY9aaXHx8yA" frameborder="0" allowfullscreen></iframe>
+								<h3>Reusing Bitmaps</h3>
+								<p>Colt McAnlis, 100 días de Google Dev, Episodio 60/100 .</p>
+							</article>
+							
+							<article class="6u 12u$(xsmall) work-item">
+								<iframe  class="image fit thumb" src="https://www.youtube.com/embed/hXW7kkyhtqo" frameborder="0" allowfullscreen></iframe>
+								
+								<h3>Conferencia de texas</h3>
+								<p>Simon Swain.</p>
+							</article>
+							
+							<article class="6u$ 12u$(xsmall) work-item">
+								<iframe class="image fit thumb" src="https://www.youtube.com/embed/DjeRilk8hPI" frameborder="0" allowfullscreen></iframe>
+
+								<h3>Django y Python 01 : ¿Que es Python? y Tipos de Datos Básicos</h3>
+								<p>Arturo Jamaica.</p>
+							</article>
+
+							<article class="6u$ 12u$(xsmall) work-item">
+								<iframe class="image fit thumb" src="https://www.youtube.com/embed/OV8BvxpNQOs?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN" frameborder="0" allowfullscreen></iframe>
+
+								<h3>Extending Native Elements -- Polycasts #15</h3>
+								<p>Polycast.</p>
+							</article>
+
+							<article class="6u$ 12u$(xsmall) work-item">
+							<iframe class="image fit thumb" src="https://www.youtube.com/embed/nKlNA32tuWI" frameborder="0" allowfullscreen></iframe>
+
+								<h3>Mobile Apps y sus Desafíos por Sebastian Rodriguez</h3>
+								<p>Desarrolladores Google.</p>
+							</article>
+							
+							<article class="6u$ 12u$(xsmall) work-item">
+							<iframe class="image fit thumb" src="https://www.youtube.com/embed/1f_Tj_JnStA?list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J" frameborder="0" allowfullscreen></iframe>
+
+								<h3>The Polymer Summit 2015 por Rob Dodson</h3>
+								<p>Desarrolladores Google.</p>
+							</article>
+
+							<article class="6u$ 12u$(xsmall) work-item">
+							<iframe class="image fit thumb" src="https://www.youtube.com/embed/pGYAg7TMmp0" frameborder="0" allowfullscreen></iframe>
+
+								<h3>Docker Tutorial</h3>
+								<p>Docker.</p>
+							</article>
+
+						</div>
+
+						<ul class="actions">
+							<li><a href="https://www.youtube.com/user/GoogleDevelopers" class="button">Youtube Google Developers</a></li>
+						</ul>
+
+						
+
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Informacion General</h2>
+				<!--		<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p> -->
+						<div class="row">
+<!--
+							<div class="8u 12u$(small)">
+								<form method="post" action="#">
+									<div class="row uniform 50%">
+										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+-->
+							<div class="4u$ 12u$(small)">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon fa-home"><span class="label">Localizacion</span></h3>
+										Mexico<br />
+										Culiacan, Sinaloa<br />
+										
+									</li>
+									<li>
+										<h3 class="icon fa-mobile"><span class="label">Facebook</span></h3>
+										<a href="https://www.facebook.com/oscar.herrera.ceballos">Oscar.Herrera.Ceballos</a>
+									</li>
+										<li>
+										<h3 class="icon fa-twitter"><span class="label">Twitter</span></h3>
+										<a href="https://twitter.com/Oscar_HerreraC">@Oscar_Herrerac</a>
+									</li>
+									<li>
+										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+										<a href="mailto:kaos.wind@gmail.com">kaos.wind@gmail.com</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				<!-- Four -->
+				<!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="6u 12u$(xsmall)">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button special">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button special small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button special">Special</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button big">Big</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button special fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button special fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button special icon fa-download">Icon</a></li>
+								<li><a href="#" class="button icon fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button special disabled">Special</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="12u$">
+										<div class="select-wrapper">
+											<select name="demo-category" id="demo-category">
+												<option value="">- Category -</option>
+												<option value="1">Manufacturing</option>
+												<option value="1">Shipping</option>
+												<option value="1">Administration</option>
+												<option value="1">Human Resources</option>
+											</select>
+										</div>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="4u$ 12u(small)">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="6u 12u$(small)">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="6u$ 12u$(small)">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="12u$">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="12u$"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				-->
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+				</br>
+				</br>
+					<li><a href="https://twitter.com/Oscar_HerreraC" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					
+					<li><a href="https://hedwigquiron.github.io/HEDWIG/" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="mailto:kaos.wind@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Oscar Herrera</li><li>Diseño: <a href="https://hedwigquiron.github.io/HEDWIG/">HEDWIG</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+            <script src="assets/js/general.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
